@@ -1,0 +1,23 @@
+﻿<Window x:Class="TestMediaView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestMediaView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Button Content="Play / Pause" Click="Button_Click" DockPanel.Dock="Top"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <local:VideoViewer x:Name="v1" Grid.Column="0" FilePath="file:///C:/temp/l.mp4" PlaybackRate="10"/>
+            <local:VideoViewer x:Name="v2" Grid.Column="1" FilePath="file:///C:/temp/f.mp4" PlaybackRate="10"/>
+            <local:VideoViewer x:Name="v3" Grid.Column="2" FilePath="file:///C:/temp/r.mp4" PlaybackRate="10"/>
+        </Grid>
+    </DockPanel>
+</Window>
